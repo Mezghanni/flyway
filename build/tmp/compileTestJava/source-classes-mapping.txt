@@ -1,2 +1,0 @@
-com/example/flyway/FlywayApplicationTests.java
- com.example.flyway.FlywayApplicationTests
