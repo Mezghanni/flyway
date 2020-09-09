@@ -24,3 +24,11 @@ hs_err_pid*
 
 .gradle
 .idea
+.classpath
+.project
+gradlew
+gradlew.bat
+build
+bin
+.settings
+gradle
