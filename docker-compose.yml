@@ -4,6 +4,7 @@ services:
     #     build: .
     #     ports:
     #       - "8080:8080"
+    #  flyway migrate -enterprise -DcherryPick="1,People_view" 
     db:
         image: postgres
         volumes:

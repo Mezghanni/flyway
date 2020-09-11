@@ -6,7 +6,7 @@ import org.flywaydb.core.api.migration.Context;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class U3__Anonymize extends BaseJavaMigration {
+public class U5__Anonymize extends BaseJavaMigration {
     public void migrate(Context context) throws Exception {
         try (Statement select = context.getConnection().createStatement()) {
             try (ResultSet rows = select.executeQuery("SELECT id FROM person ORDER BY id")) {
