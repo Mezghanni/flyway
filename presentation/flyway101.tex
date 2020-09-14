@@ -101,7 +101,7 @@ Le projet a commencer avec une première release en 2010. \\
         \item Command-line: permet d'executer Flyway en ligne de commande utile pour les agents Docker.
         \item Maven-plugin: permet d'executer Flyway dans un build Maven.
         \item Gradle-plugin: permet d'executer Flyway dans des tasks Gradle.
-        \item Java-API: permet d'executer Flyway a l'interieur de code Java.
+        \item Java-API: permet d'executer Flyway a l'interieur de code Java (fonctionnalité de migration au demarrage de l'application).
         \item Plugins communautaire: npm, Jenkins, SpringBoot, Quarkus,...
     \end{itemize}
 \end{frame} 
@@ -327,14 +327,32 @@ Options des commandes migrate/undo (beta):
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Demo
+%% Demo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Démo]{Démonstration}
-\subsection*{Scenario 1}
+\subsection*{Scenario 1: type de migration et migration au démarrage}
 \begin{frame}
+Cette demo est realisé avec une version d'essai enterprise: 
+\begin{enumerate}
+ \item migration et Undo en SQL 
+ \item migration repetables avec chagement de checksum
+ \item migration Bash (bulk insert)
+ \item migration Java (anonymize)
+ \item migration Python 
+ \item migration au démarrage de l'application (Java API)
+\end{enumerate}
 \end{frame}
-\subsection*{Scenario 2}
+\subsection*{Scenario 2: conflit de version de migration}
 \begin{frame}
+Cette demo est realisé avec une version d'essai enterprise: 
+\begin{enumerate}
+ \item creer un migration avec V1\_\_Create\_person\_table.sql 
+ \item lancer la migration
+ \item creer un migration avec V1\_\_Create\_email\_table.sql
+ \item lancer la migration et visualiser l'erreur
+ \item resoudre le conflit
+ \item lancer la migration
+\end{enumerate}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
