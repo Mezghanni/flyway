@@ -32,3 +32,11 @@ bin
 build
 .settings
 gradle
+
+# Presentation
+presentation/*.aux
+presentation/*.nav
+presentation/*.out
+presentation/*.snm
+presentation/*.gz
+presentation/*.toc
