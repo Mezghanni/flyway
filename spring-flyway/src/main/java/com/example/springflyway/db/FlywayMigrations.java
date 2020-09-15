@@ -51,6 +51,7 @@ public class FlywayMigrations implements CommandLineRunner {
                 .dataSource(dataSource)
                 .javaMigrations(migrations)
                 .load();
+        System.out.println(MigrationInfoDumper.dumpToAsciiTable(flyway.info().all()));
         flyway.clean();
         System.out.println(MigrationInfoDumper.dumpToAsciiTable(flyway.info().all()));
         flyway.migrate();
