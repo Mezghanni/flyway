@@ -28,6 +28,7 @@ hs_err_pid*
 .project
 gradlew
 gradlew.batbuild
+gradlew.bat
 bin
 build
 .settings

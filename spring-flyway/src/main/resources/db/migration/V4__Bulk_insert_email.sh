@@ -1,0 +1,1 @@
+PGPASSWORD=postgres psql -d postgres -h localhost -U postgres -w -c "\COPY public.emails from 'src/main/resources/db/migration/email.csv' with delimiter ',' CSV HEADER ;"
