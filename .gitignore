@@ -35,9 +35,9 @@ build
 gradle
 
 # Presentation
-presentation/*.aux
-presentation/*.nav
-presentation/*.out
-presentation/*.snm
-presentation/*.gz
-presentation/*.toc
+pres*/*.aux
+pres*/*.nav
+pres*/*.out
+pres*/*.snm
+pres*/*.gz
+pres*/*.toc
