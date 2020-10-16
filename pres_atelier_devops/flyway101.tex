@@ -135,14 +135,14 @@ Le projet a commencé avec une première release en 2010. \\
 \subsection*{Migrations}
 \begin{frame}{Définitions}
 
-Avec Flyway, toutes les modifications apportées à la base de données sont appelées \textbf{migrations}. \\
-Les migrations peuvent être : 
+Avec Flyway, toute modification apportée à la base de données est appelée \textbf{migration}. \\
+Une migration peut être : 
 \begin{itemize}
  \item versionnée
  \item répétable
 \end{itemize}
 
-Les migrations versionnées se présentent sous 2 formes:
+Une migration versionnée se présente sous 2 formes:
 \begin{itemize}
  \item régulière
  \item annulée
@@ -150,12 +150,12 @@ Les migrations versionnées se présentent sous 2 formes:
 
 \end{frame}
 
-\begin{frame}{Type de migrations}
+\begin{frame}{Type de migration}
 
 \begin{itemize}
- \item \textbf{Les migrations versionnées} ont une version, une description et un checksum. La version doit être unique. Elles sont appliquées dans l'ordre une seule fois.
- \item \textbf{Les migrations d'annulation}: une migration régulière peut être annulée a l'aide d'une migration d'annulation de même version. 
- \item \textbf{Les migrations répétables} ont une description et un checksum, mais pas de version. Elles sont réappliquées à chaque fois que leur checksum change. 
+ \item \textbf{Migration versionnée} a une version, une description et un checksum. Elle est appliquée dans l'ordre une seule fois. La version doit être unique.
+ \item \textbf{Migration d'annulation}: une migration régulière peut être annulée a l'aide d'une migration d'annulation de même version. 
+ \item \textbf{Migration répétable} a une description et un checksum, mais pas de version. Elle est réappliquée à chaque fois que son checksum change. 
 
 \end{itemize}
 \end{frame}
@@ -300,10 +300,10 @@ l'exécution du script est ignorée, en mettant à jour la table d'historique de
 \section[Démo]{Démonstration}
 \subsection*{Scenario 1: exemples de cas d'utilisation de Flyway }
 \begin{frame}
-Cette démo est réalisé avec une version d'essai Teams:
+Cette démo est réalisée avec une version d'essai Teams:
 \begin{enumerate}
- \item Migrate et Undo en SQL 
- \item migration repetables avec chagement de checksum
+ \item migrate et undo en SQL 
+ \item migration répétable avec changement de checksum
  \item migration Bash (bulk insert)
  \item migration Java (anonymize)
  \item migration Python 
@@ -311,7 +311,7 @@ Cette démo est réalisé avec une version d'essai Teams:
 \end{frame}
 \subsection*{Scenario 2: migration Java vs migration à base de Bean Spring}
 \begin{frame}
-Cette démo est réalisé avec une version d'essai Teams: 
+Cette démo est réalisée avec une version d'essai Teams: 
 \begin{enumerate}
  \item migration au démarrage de l'application avec l'intégration Spring
  \item migration à base de plain Java: utilisant une connexion JDBC
@@ -322,13 +322,13 @@ Cette démo est réalisé avec une version d'essai Teams:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Discussion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Discussion]{Discussion et Q\&A}
-\subsection*{Conclusion }
+\section[Conclusion]{Conclusion}
+\subsection*{Conclusion}
 \begin{frame}
 \textbf {Pros : \\}
 \begin{itemize}
  \item riche en fonctionnalités 
- \item supporte plusieurs langages/platform/BD
+ \item supporte plusieurs langages / platformes / BD
  \item facilite les tâches de maintenance pour des cas d'utilisation complexes
 \end{itemize}
 \textbf {Cons : \\}
@@ -345,7 +345,12 @@ Cette démo est réalisé avec une version d'essai Teams:
 \end{itemize}
 \end{frame}
 
-\subsection*{Q\&A et Références}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Discussion]{Q\&A et Discussion}
+
+\subsection*{Q\&A et Discussion}
 \begin{frame}
 \begin{center}
  \includegraphics[scale=0.3,keepaspectratio=true]{qa.jpg}
